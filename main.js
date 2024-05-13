@@ -25,3 +25,12 @@ const sortedChampions = filteredChampionsWithoutTagTeam.sort((a, b) => {
   const lastNameB = b.split(" ")[1];
   return lastNameA.localeCompare(lastNameB);
 });
+
+const CHAMPIONSHIPS = sortedChampions.map((champion, index) => {
+  return {
+    title: filteredBelts[index],
+    champion: champion,
+  };
+});
+
+console.log(CHAMPIONSHIPS);
